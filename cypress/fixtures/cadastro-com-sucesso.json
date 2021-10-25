@@ -1,0 +1,10 @@
+{
+  "user":
+  {
+      "email":"Chapter5321@mailinator.com",
+      "username":"Chapter 5 321",
+      "bio":null,
+      "image":"https://realworld-temp-api.herokuapp.com/images/smiley-cyrus.jpeg",
+      "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkNoYXB0ZXI1MzIxQG1haWxpbmF0b3IuY29tIiwidXNlcm5hbWUiOiJDaGFwdGVyIDUgMzIxIiwiYmlvIjpudWxsLCJpbWFnZSI6Imh0dHBzOi8vcmVhbHdvcmxkLXRlbXAtYXBpLmhlcm9rdWFwcC5jb20vaW1hZ2VzL3NtaWxleS1jeXJ1cy5qcGVnIiwiaWF0IjoxNjM1MTcxNjkzLCJleHAiOjE2NDAzNTU2OTN9.WKcw0ac-Nnef0OAfNPXbECt-kb7WfYE-NQXj9bHk25c"
+  }
+}
