@@ -1,12 +1,25 @@
 /// <reference types="cypress" />
 
 describe('Articles', () => {
-    it('Cadastro de um novo artigo com sucesso', () => {
-        cy.visit('login');
 
-        cy.get('[placeholder=Email]').type('ChapterV@mailinator.com');
-        cy.get('[placeholder=Password]').type('123456');
-        cy.contains('button', 'Sign in').click();
+    beforeEach(() => {
+        cy.request({
+            url: 'https://api.realworld.io/api/users/login',
+            method: 'POST',
+            body: {
+                "user": {
+                    "email": "ChapterV@mailinator.com",
+                    "password": "123456"
+                }
+            }
+        }).then(response => {
+            window.localStorage.setItem('jwtToken', response.body.user.token);
+        });
+
+        cy.visit('/');
+    });
+
+    it('Cadastro de um novo artigo com sucesso', () => {
 
         const articleName = 'Artigo de testes' + new Date().getTime();
 
