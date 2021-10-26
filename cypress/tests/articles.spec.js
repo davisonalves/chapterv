@@ -1,21 +1,10 @@
 /// <reference types="cypress" />
+/// <reference types="../support/" />
 
 describe('Articles', () => {
 
     beforeEach(() => {
-        cy.request({
-            url: 'https://api.realworld.io/api/users/login',
-            method: 'POST',
-            body: {
-                "user": {
-                    "email": "ChapterV@mailinator.com",
-                    "password": "123456"
-                }
-            }
-        }).then(response => {
-            window.localStorage.setItem('jwtToken', response.body.user.token);
-        });
-
+        cy.login();
         cy.visit('/');
     });
 
