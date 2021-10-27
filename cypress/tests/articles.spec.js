@@ -14,6 +14,8 @@ describe('Articles', () => {
 
     articles.preencherFormulario()
 
+    articles.submeterFormulario()
+
     articles.verificarSeOArtigoFoiCriado()
   })
 })
