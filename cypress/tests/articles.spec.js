@@ -1,19 +1,19 @@
 /// <reference types="cypress" />
 /// <reference types="../support/" />
-import articles from "../support/pages/articles"
+import articles from '../support/pages/articles'
 
 describe('Articles', () => {
+  beforeEach(() => {
+    cy.login()
 
-    beforeEach(() => {
-        cy.login();
-        cy.visit('/');
-    });
+    cy.visit('/')
+  })
 
-    it('Cadastro de um novo artigo com sucesso', () => {
+  it('Cadastro de um novo artigo com sucesso', () => {
+    articles.acessarFormulario()
 
-        articles.acessarFormulario();
-        articles.preencherFormulario();
-        articles.verificarSeOArtigoFoiCriado();
+    articles.preencherFormulario()
 
-    });
-});
+    articles.verificarSeOArtigoFoiCriado()
+  })
+})
